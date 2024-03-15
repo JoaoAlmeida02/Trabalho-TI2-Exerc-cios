@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Carros</title>
+</head>
+
+<body onload="onLoad()">
+    <h1>Controle de Carros</h1>
+    <input type="hidden" id="msg" name="msg" value="">
+    <UM-CARRO>
+    <br>
+    <LISTAR-CARRO>
+
+    <div style="text-align: center;">
+    
+        <button class="input--button" onclick="location.href='/carro/form/insert'">Inserir Novo Carro</button>
+        <button class="input--button" onclick="location.href='/carro/form/update'">Atualizar Carro</button>
+        <button class="input--button" onclick="location.href='/carro/delete'">Excluir Carro</button>
+        <button class="input--button" onclick="listarCarros()">Listar Todos os Carros</button>
+        <input type="submit" value="Cadastrar" class="input--main style input--button">
+    </div>
+    
+    <style>
+       * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .input--main__style {
+            background-color: #00FF00;
+        }
+
+        .input--button {
+            font-weight: bold;
+            font-size: medium;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            color: white;
+            background-color: #007bff;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        .input--register {
+            display: inline;
+        }
+
+        input[type="text"], input[type="number"] {
+            display: block;
+            border-radius: 7px;
+            padding: 10px;
+            border: 1px solid lightgray;
+            color: black;
+            margin-bottom: 10px;
+        }
+
+        form p {
+            text-align: initial;
+            display: inline;
+            margin-left: 15px;
+        }
+
+        .p--nomargin {
+            margin-left: 0px;
+            margin-right: 10px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 20px auto;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #ddd;
+        }
+    </style>
+
+    <script type="text/javascript">
+        // Função para listar todos os carros
+        function listarCarros() {
+            location.href = '/carro/list/all'; // Rota para obter todos os carros
+        }
+
+        // Restante do seu script JavaScript existente aqui
+    </script>
+
+</body>
+</html>
